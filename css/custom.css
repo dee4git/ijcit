@@ -33,6 +33,7 @@ body {
   
   .ftco-navbar-light {
     background: transparent !important;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -828,7 +829,7 @@ body {
   .ftco-footer {
     font-size: 16px;
     background: #000000;
-    padding: 7em 0;
+    padding: 2em;
     z-index: 0; }
     .ftco-footer .ftco-footer-logo {
       text-transform: uppercase;
