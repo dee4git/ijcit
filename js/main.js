@@ -194,30 +194,24 @@
 	
 
 	var counter = function() {
-		
-		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
+		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint(function(direction) {
+			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+				$('.number').each(function() {
+					var $this = $(this);
+					var num = Math.floor(Math.random() * 21);
+					$this.animateNumber({
+						number: num,
+						numberStep: comma_separator_number_step
+					}, 2000); 
 				});
-				
 			}
-
-		} , { offset: '95%' } );
-
+		}, { offset: '95%' });
 	}
 	counter();
+	
+	
+	
 
 
 	var contentWayPoint = function() {
@@ -352,5 +346,13 @@ hash = function(h){
     location.hash = h;
   }
 }
+
+
+  // Generate a random number between 0 and 20
+  var randomNumber = Math.floor(Math.random() * 21);
+  
+  // Display the random number
+  document.getElementById("randomNumber").innerHTML = randomNumber;
+
 
 
